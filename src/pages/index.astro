@@ -2,9 +2,18 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Footer from '../components/Footer.astro';
+import Navbar from "../components/Navbar.astro";
 ---
 
-<Layout title="Welcomedf to Astro.">
+<Layout title="Hello Astro Projesi">
+	<Navbar 
+		brandName="Hello Astro"
+		navItemText_1="Link-1"
+		navItemText_2="Link-2"
+		navItemText_3="Link-3"
+		buttonText="GitHub'da göster"
+		href="https://github.com/sonatipek/astro-deneme"
+	/>
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">

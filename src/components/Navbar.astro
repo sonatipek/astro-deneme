@@ -1,0 +1,65 @@
+---
+export interface Props{
+    brandName: string;
+    navItemText_1 : string;
+    navItemText_2 : string;
+    navItemText_3 : string;
+    buttonText: string;
+    href: string;
+}
+
+const {brandName, navItemText_1, navItemText_2, navItemText_3, buttonText, href} = Astro.props;
+---
+
+<nav>
+    <h1>{brandName}</h1>
+
+    <ul>
+        <li>{navItemText_1}</li>
+        <li>{navItemText_2}</li>
+        <li>{navItemText_3}</li>
+    </ul>
+
+    <a href={href} target="_blank">{buttonText}</a>
+</nav>
+
+<style>
+    nav{
+        background-color: #333;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10vh;
+    }
+    h1{
+        color: #f6f6f6;
+    }
+
+    ul{
+        display: flex;
+        gap: 1.5rem;
+        list-style-type: none;
+        color: #f6f6f6;
+        font-weight: bold;
+    }
+    li:hover{
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+        cursor: pointer;
+    }
+    a{
+        color: #f6f6f6;
+        border: 2px solid #f6f6f6;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 7px;
+        background: transparent;
+        font-weight: bold;
+    }
+    a:hover{
+        background-image: linear-gradient(45deg, rgb(var(--accent)), #da62c4 60%, #b97eaf 100%);
+    }
+</style>
